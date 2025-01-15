@@ -1,3 +1,4 @@
+import PriceOption from "../priceOption/PriceOption"
 
 export default function PriceOptions() {
   const prices =  [
@@ -70,8 +71,10 @@ export default function PriceOptions() {
       ]
       
   return (
-    <div>
-        
+    <div className="grid lg:grid-cols-3 md:grid-cols-2">
+       {
+         prices.map(option => <PriceOption key={option.id} option={option}></PriceOption>)
+       }
     </div>
   )
 }
