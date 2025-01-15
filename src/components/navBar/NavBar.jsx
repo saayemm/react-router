@@ -1,6 +1,10 @@
+import { useState } from "react";
 import Link from "../link/Link"
+import { IoMdMenu } from "react-icons/io";
+import { IoCloseSharp } from "react-icons/io5";
 
 export default function NavBar() {
+    const [open, setOpen] = useState(false)
     const routes = [
         {id: 1, path: '/', name: "home"},
         {id: 2, path: '/about', name: "about"},
@@ -10,6 +14,12 @@ export default function NavBar() {
     ]
   return (
     <nav>
+        <div className="md:hidden cursor-pointer text-2xl" onClick={()=>setOpen(!open)}>
+            {
+                open===true ? <IoCloseSharp /> : <IoMdMenu></IoMdMenu>
+            }
+
+        </div>
         <ul className="md:flex gap-6">
         {
             routes.map( route=> <Link key={route.id} route={route}></Link> )
