@@ -14,14 +14,14 @@ export default function NavBar() {
     ]
   return (
     <nav>
-        <div className="md:hidden cursor-pointer text-2xl" onClick={()=>setOpen(!open)}>
+        <div className="md:hidden cursor-pointer text-2xl bg-slate-200 px-8 pt-8 pb-4 text-black" onClick={()=>setOpen(!open)}>
             {
                 open===true ? <IoCloseSharp /> : <IoMdMenu></IoMdMenu>
             }
 
         </div>
-        <ul className="md:flex gap-6">
-        {
+        <ul className={`md:flex gap-6 bg-slate-200 duration-1000 p-8 text-black ${open ? '' : 'hidden'}`}>
+        { 
             routes.map( route=> <Link key={route.id} route={route}></Link> )
         }
         </ul>
