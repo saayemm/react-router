@@ -6,11 +6,11 @@ import { IoCloseSharp } from "react-icons/io5";
 export default function NavBar() {
     const [open, setOpen] = useState(false)
     const routes = [
-        {id: 1, path: '/', name: "home"},
-        {id: 2, path: '/about', name: "about"},
-        {id: 3, path: '/services', name: "services"},
-        {id: 4, path: '/contact', name: "contact"},
-        {id: 5, path: '/blog', name: "blog"}
+        {id: 1, path: '/', name: "Home"},
+        {id: 2, path: '/about', name: "About"},
+        {id: 3, path: '/services', name: "Services"},
+        {id: 4, path: '/contact', name: "Contact"},
+        {id: 5, path: '/blog', name: "Blog"}
     ]
   return (
     <nav>
